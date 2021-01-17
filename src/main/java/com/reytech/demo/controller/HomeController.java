@@ -18,9 +18,16 @@ public class HomeController {
         return "hello";
     }
 
+     //el método message será ejecutado cuando se solicite la URL de inicio http://localhost:8090/.
+    //En ese momento, el método será ejecutado añadiendo un mensaje a una variable con nombre message
+    //que se guarda en model, objeto que se pasa a la vista, para que pueda construir el html dinámicamente.
+    
     @GetMapping("/message")
     public String message(Model model) {
         model.addAttribute("message", "This is a custom message");
+        //Spring pasará el control a la vista con nombre message correspondiente al fichero message.html 
+        //de la carpeta de templates, tal y como indica el return «index», 
+        //en el que no hace falta indicar la extensión .html.
         return "message";
     }
 }
