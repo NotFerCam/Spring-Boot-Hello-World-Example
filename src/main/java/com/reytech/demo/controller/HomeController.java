@@ -24,7 +24,7 @@ public class HomeController {
     
     @GetMapping("/message")
     public String message(Model model) {
-        model.addAttribute("message", "This is a custom message");
+        model.addAttribute("message", "Esto es un mensaje personalizado");
         //Spring pasará el control a la vista con nombre message correspondiente al fichero message.html 
         //de la carpeta de templates, tal y como indica el return «index», 
         //en el que no hace falta indicar la extensión .html.
